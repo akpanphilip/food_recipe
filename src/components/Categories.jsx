@@ -4,29 +4,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image"
 import categoryImg from '../../public/hero-img-1.jpg'
 const Categories = () => {
-
-    // const [data, setData] = useState();
-    // const url = 'https://yummly2.p.rapidapi.com/categories/list';
-    // useEffect(() => {
-    //     const options = {
-    //         method: 'GET',
-    //         headers: {
-    //             'X-RapidAPI-Key': '9ea6f7415amshd66bac1e7e2aff1p119fbajsn9b6d8fc8e386',
-    //             'X-RapidAPI-Host': 'yummly2.p.rapidapi.com'
-    //         }
-    //     };
-
-    //     fetch(url, options)
-    //         .then(response => response.json())
-    //         .then(response => {
-    //             console.log(response);
-    //             setData(response['browse-categories']);
-    //         })
-    //         .catch(err => {
-    //             console.log(err);
-    //         })
-    // }, [])
-
     var settings = {
         dots: true,
         infinite: true,
