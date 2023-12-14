@@ -2,8 +2,6 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import "remixicon/fonts/remixicon.css";
 import Navbar from "@/components/Navbar";
-import { ThemeContextProvider } from "./context/ThemeContext";
-import ThemeProvider from "./providers/ThemeProvider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contact from "@/components/Contact";
@@ -19,20 +17,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <ThemeContextProvider>
-          <ThemeProvider>
-            <div className="main_body">
-              <Contact />
-              <Navbar />
-              <div className="in_body margin-150">
-                <div className="wrapper">
-                  {children}
-                  <Footer />
-                </div>
-              </div>
+        <div className="main_body">
+          <Contact />
+          <Navbar />
+          <div className="in_body margin-150">
+            <div className="wrapper">
+              {children}
+              <Footer />
             </div>
-          </ThemeProvider>
-        </ThemeContextProvider>
+          </div>
+        </div>
       </body>
     </html>
   );
