@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 // import { CategoryProvider } from "@/context/CategoryContext";
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet"></link>
 export default function Home() {
-  console.log("hi");
   return (
     <AnimatePresence>
       <motion.div

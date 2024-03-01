@@ -782,13 +782,28 @@ ul {
   border-radius: 6px;
   z-index: -100;
 }
-@media screen and (max-width: 890px) {
-  .aboutImg {
+
+/* @media screen and (max-width: 890px) {
+  .aboutImg img {
+    width: 370px;
   }
   .aboutImg::after {
     content: "";
     position: absolute;
-    width: 90%;
+    width: 94%;
+    height: 90%;
+    bottom: 30px;
+    right: 20px;
+  }
+} */
+@media screen and (max-width: 700px) {
+  .aboutImg img {
+    width: 370px;
+  }
+  .aboutImg::after {
+    content: "";
+    position: absolute;
+    width: 94%;
     height: 90%;
     bottom: 30px;
     right: 20px;
