@@ -5,6 +5,7 @@ import { useState } from 'react'
 // import ThemeToggle from '../themeToggle/ThemeToggle';
 import { motion, useScroll } from "framer-motion";
 import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
     const pathname = usePathname()
@@ -13,10 +14,15 @@ const Navbar = () => {
     const isAbout = pathname === '/about';
     const isContact = pathname === '/contact';
 
+
+    const router = useRouter();
     const { scrollYProgress } = useScroll();
     const [open, setOpen] = useState(false);
     const toggleHandler = () => {
         setOpen(!open);
+    }
+    const removeNav = () => {
+        setOpen(false);
     }
     return (
         <div className="navbar margin-150">
@@ -29,8 +35,7 @@ const Navbar = () => {
                     initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                 >
-                    <Link href="/" className="logo">Yum<span>mee</span></Link>
-
+                    <div className="logo" onClick={() => router.push('/')}>Yum<span>mee</span></div>
                 </motion.div>
                 <i className="ri-menu-3-line" onClick={toggleHandler}></i>
             </div>
@@ -38,18 +43,18 @@ const Navbar = () => {
                 initial={{ x: 100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 className="links_lg">
-                <li><Link href="/" className={isHome ? 'active' : ''}>Home</Link></li>
-                <li><Link href="/about" className={isAbout ? 'active' : ''}>About</Link></li>
-                <li><Link href="/contact" className={isContact ? 'active' : ''}>Contact</Link></li>
+                <li className={isHome ? 'active' : ''} onClick={() => router.push('/')}>Home</li>
+                <li className={isAbout ? 'active' : ''} onClick={() => router.push('/about')}>About</li>
+                <li className={isContact ? 'active' : ''} onClick={() => router.push('/contact')}>Contact</li>
             </motion.ul>
 
             {open && <motion.ul
                 initial={{ x: 200, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 className="links_sm">
-                <li><Link className={isHome ? 'active' : ''} href="/">Home</Link></li>
-                <li><Link className={isHome ? 'active' : ''} href="/about">About</Link></li>
-                <li><Link className={isHome ? 'active' : ''} href="/contact">Contact</Link></li>
+                <li onClick={removeNav}><Link href="/">Home</Link></li>
+                <li onClick={removeNav}><Link href="about">About</Link></li>
+                <li onClick={removeNav}><Link href="contact">Contact</Link></li>
             </motion.ul>}
         </div>
     )

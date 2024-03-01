@@ -7,21 +7,21 @@ const Footer = () => {
                     <p className="footer_title logo">Yum<span>mee</span></p>
 
                     <p className="footer_desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolore tenetur eius delectus est accusamus impedit placeat suscipit. Amet, consequuntur?
+                    Your go-to for delicious recipes and culinary delights. We prioritize originality, exceptional service, and the joy of cooking.
                     </p>
 
                     <ul className='footer_links flex_links gap-2 mt-4'>
                         <li>
-                            <Link href=""><i class="ri-instagram-line"></i></Link>
+                            <Link href=""><i className="ri-instagram-line"></i></Link>
                         </li>
                         <li>
-                            <Link href=""><i class="ri-linkedin-box-fill"></i></Link>
+                            <Link href=""><i className="ri-linkedin-box-fill"></i></Link>
                         </li>
                         <li>
-                            <Link href=""><i class="ri-twitter-fill"></i></Link>
+                            <Link href=""><i className="ri-twitter-fill"></i></Link>
                         </li>
                         <li>
-                            <Link href=""><i class="ri-facebook-box-fill"></i></Link>
+                            <Link href=""><i className="ri-facebook-box-fill"></i></Link>
                         </li>
                     </ul>
                 </div>
@@ -59,7 +59,7 @@ const Footer = () => {
             </div>
 
             <p className="copyright">
-                Copyright &copy; 2023 Yummee. All Rights Reserved.
+                Copyright &copy; 2024 Yummee. All Rights Reserved.
             </p>
 
 

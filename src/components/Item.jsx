@@ -5,7 +5,7 @@ import recipeImg from '../../public/hero-img.webp'
 import profileImg from '../../public/profile.png'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-const Recipe = () => {
+const Item = () => {
 
     const [desc, setDesc] = useState(true);
     const [review, setReview] = useState(false);
@@ -32,22 +32,24 @@ const Recipe = () => {
         <div className="hero">
             <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-16 item_section">
                 <div className="item_section_img">
-                    <motion.div
-                        initial={{
-                            x: 8, y: 8,
-                        }}
-                        animate={{
-                            x: 0, y: 0,
-                        }}
-                        transition={{
-                            repeat: Infinity,
-                            repeatType: "mirror",
-                            duration: 2,
-                            ease: "easeInOut",
-                        }}
-                    >
-                        <Image src={recipeImg} className="rounded-md" alt='' />
-                    </motion.div>
+                    <div className="itemImg">
+                        <motion.div
+                            initial={{
+                                x: 8, y: 8,
+                            }}
+                            animate={{
+                                x: 0, y: 0,
+                            }}
+                            transition={{
+                                repeat: Infinity,
+                                repeatType: "mirror",
+                                duration: 2,
+                                ease: "easeInOut",
+                            }}
+                        >
+                            <Image src={recipeImg} className="rounded-md" alt='' />
+                        </motion.div>
+                    </div>
                 </div>
                 <div className="item_desc">
                     <p className="item_title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, accusamus?</p>
@@ -55,11 +57,11 @@ const Recipe = () => {
                         Lorem ipsum dolor sit amet.
                     </p>
                     <div className="recipe_rating mt-3 mb-3">
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-fill"></i>
+                        <i className="ri-star-fill"></i>
+                        <i className="ri-star-fill"></i>
+                        <i className="ri-star-fill"></i>
+                        <i className="ri-star-fill"></i>
+                        <i className="ri-star-fill"></i>
                     </div>
                     <div className="tag_lists">
                         <span className="tag">Salad</span>
@@ -120,4 +122,4 @@ const Recipe = () => {
         </div>
     )
 }
-export default Recipe
+export default Item

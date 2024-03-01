@@ -18,11 +18,11 @@ const RelatedItem = () => {
                             <p className="recipe_flag">Lorem ipsum dolor.</p>
 
                             <div className="recipe_rating">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
                             </div>
                             <div className="mt-4 mb-4">
                                 <Link href="" className="see_more">see more</Link>
@@ -39,11 +39,11 @@ const RelatedItem = () => {
                             <p className="recipe_flag">Lorem ipsum dolor.</p>
 
                             <div className="recipe_rating">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
                             </div>
                             <div className="mt-4 mb-4">
                                 <Link href="" className="see_more">see more</Link>
@@ -60,11 +60,11 @@ const RelatedItem = () => {
                             <p className="recipe_flag">Lorem ipsum dolor.</p>
 
                             <div className="recipe_rating">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
                             </div>
                             <div className="mt-4 mb-4">
                                 <Link href="" className="see_more">see more</Link>
@@ -81,11 +81,11 @@ const RelatedItem = () => {
                             <p className="recipe_flag">Lorem ipsum dolor.</p>
 
                             <div className="recipe_rating">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
                             </div>
                             <div className="mt-4 mb-4">
                                 <Link href="" className="see_more">see more</Link>

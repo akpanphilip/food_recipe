@@ -1,8 +1,10 @@
 "use client";
 import Slider from "react-slick";
-import { useEffect, useState } from "react";
-import Image from "next/image"
-import categoryImg from '../../public/hero-img-1.jpg'
+// import { useEffect, useState } from "react";
+// import Image from "next/image"
+// import categoryImg from '../../public/hero-img-1.jpg'
+import CategoryCard from "./CategoryCard";
+import CategoryList from "./CategoryList";
 const Categories = () => {
     var settings = {
         dots: true,
@@ -36,7 +38,7 @@ const Categories = () => {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToScroll: 3
                 }
             }
         ]
@@ -45,107 +47,10 @@ const Categories = () => {
         <div className="section">
             <p className="subtitle text-center">personalize your experience</p>
             <p className="title text-center">What are your favorite cuisines?</p>
-            {/* <Slider {...settings}>
-                {data && data.map((d, index) => (
-                    <div key={index} className="category">
-                        <div className="category_in">
-                            <div className="display_name">{d.display.displayName}</div>
-                            <Image src={d.display.categoryImage} className="border-md" fill alt="category img" />
-                        </div>
-                    </div>
-                ))}
-            </Slider> */}
-
             <Slider {...settings}>
-                <div className="categories_list">
-                    <div className="categories_wrap">
-                        <div className="categories_wrap_in">
-                            <Image src={categoryImg} alt="category img" />
-                            <p className="category_text">Baked Salad</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="categories_list">
-                    <div className="categories_wrap">
-                        <div className="categories_wrap_in">
-                            <Image src={categoryImg} alt="category img" />
-                            <p className="category_text">Baked Salad</p>
-                            <div className="category_icon"></div>
-                        </div>
-                    </div>
-                </div>
-                <div className="categories_list">
-                    <div className="categories_wrap">
-                        <div className="categories_wrap_in">
-                            <Image src={categoryImg} alt="category img" />
-                            <p className="category_text">Baked Salad</p>
-                            <div className="category_icon"></div>
-                        </div>
-                    </div>
-                </div>
-                <div className="categories_list">
-                    <div className="categories_wrap">
-                        <div className="categories_wrap_in">
-                            <Image src={categoryImg} alt="category img" />
-                            <p className="category_text">Baked Salad</p>
-                            <div className="category_icon"></div>
-                        </div>
-                    </div>
-                </div>
-                <div className="categories_list">
-                    <div className="categories_wrap">
-                        <div className="categories_wrap_in">
-                            <Image src={categoryImg} alt="category img" />
-                            <p className="category_text">Baked Salad</p>
-                            <div className="category_icon"></div>
-                        </div>
-                    </div>
-                </div>
-                <div className="categories_list">
-                    <div className="categories_wrap">
-                        <div className="categories_wrap_in">
-                            <Image src={categoryImg} alt="category img" />
-                            <p className="category_text">Baked Salad</p>
-                            <div className="category_icon"></div>
-                        </div>
-                    </div>
-                </div>
-                <div className="categories_list">
-                    <div className="categories_wrap">
-                        <div className="categories_wrap_in">
-                            <Image src={categoryImg} alt="category img" />
-                            <p className="category_text">Baked Salad</p>
-                            <div className="category_icon"></div>
-                        </div>
-                    </div>
-                </div>
-                <div className="categories_list">
-                    <div className="categories_wrap">
-                        <div className="categories_wrap_in">
-                            <Image src={categoryImg} alt="category img" />
-                            <p className="category_text">Baked Salad</p>
-                            <div className="category_icon"></div>
-                        </div>
-                    </div>
-                </div>
-                <div className="categories_list">
-                    <div className="categories_wrap">
-                        <div className="categories_wrap_in">
-                            <Image src={categoryImg} alt="category img" />
-                            <p className="category_text">Baked Salad</p>
-                            <div className="category_icon"></div>
-                        </div>
-                    </div>
-                </div>
-                <div className="categories_list">
-                    <div className="categories_wrap">
-                        <div className="categories_wrap_in">
-                            <Image src={categoryImg} alt="category img" />
-                            <p className="category_text">Baked Salad</p>
-                            <div className="category_icon"></div>
-                        </div>
-                    </div>
-                </div>
+                {CategoryList.map((category) => (
+                    <CategoryCard key={category.id} {...category} />
+                ))}
             </Slider>
 
 
