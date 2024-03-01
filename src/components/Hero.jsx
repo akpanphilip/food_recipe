@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import Button from "../components/UI/Button";
 import styles from "./bubble.module.css"
 
