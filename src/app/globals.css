@@ -782,7 +782,18 @@ ul {
   border-radius: 6px;
   z-index: -100;
 }
-
+@media screen and (max-width: 890px) {
+  .aboutImg {
+  }
+  .aboutImg::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    bottom: 30px;
+    right: 20px;
+  }
+}
 .about_info:hover {
   background: var(--mainClr);
   border: none;
