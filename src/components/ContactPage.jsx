@@ -16,7 +16,7 @@ const ContactPage = () => {
         messageRef.current.value = "";
 
         toast.success("Message Sent!", {
-            position: toast.POSITION.TOP_RIGHT
+            position: toast.POSITION.BOTTOM_RIGHT
         });
     }
     return (

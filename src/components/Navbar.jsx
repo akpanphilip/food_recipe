@@ -43,9 +43,13 @@ const Navbar = () => {
                 initial={{ x: 100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 className="links_lg">
-                <li className={isHome ? 'active' : ''} onClick={() => router.push('/')}>Home</li>
+                {/* <li className={isHome ? 'active' : ''} onClick={() => router.push('/')}>Home</li>
                 <li className={isAbout ? 'active' : ''} onClick={() => router.push('/about')}>About</li>
-                <li className={isContact ? 'active' : ''} onClick={() => router.push('/contact')}>Contact</li>
+                <li className={isContact ? 'active' : ''} onClick={() => router.push('/contact')}>Contact</li> */}
+
+                <li className={isHome ? 'active' : ''} ><Link href="/">Home</Link></li>
+                <li className={isAbout ? 'active' : ''}><Link href="about">About</Link></li>
+                <li className={isContact ? 'active' : ''}><Link href="contact">Contact</Link></li>
             </motion.ul>
 
             {open && <motion.ul
